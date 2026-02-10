@@ -44,15 +44,23 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-mcgill-red rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">E</span>
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="flex w-fit justify-center items-center">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+                <img
+                  src="/logos/evplab-logo.png"
+                  alt="EVP Lab Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span className="text-xl text-black">EVP Lab</span>
             </div>
-            <div>
-              <span className="text-xl font-bold text-primary">EVP Lab</span>
-              <span className="block text-xs text-text-light">
-                McGill University
-              </span>
+            <div className="w-30 rounded-lg flex items-center justify-center">
+              <img
+                src="/logos/McGill_University-logo.svg"
+                alt="EVP Lab Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
           </Link>
 
@@ -148,7 +156,9 @@ export default function Navbar() {
       {/* Mobile Nav */}
       <div
         className={`lg:hidden absolute left-0 right-0 top-full bg-white border-t shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
-          mobileOpen ? "max-h-125 opacity-100" : "max-h-0 opacity-0 border-t-transparent shadow-none"
+          mobileOpen
+            ? "max-h-125 opacity-100"
+            : "max-h-0 opacity-0 border-t-transparent shadow-none"
         }`}>
         <div className="px-4 py-3 space-y-1">
           {navLinks.map((link) => (

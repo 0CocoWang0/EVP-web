@@ -86,10 +86,10 @@ export default function PublicationsPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-to-br from-primary to-accent py-20">
+      <section className="bg-warm-gray py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Publications</h1>
-          <p className="text-xl text-gray-300 max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-4">Publications</h1>
+          <p className="text-xl text-text-secondary max-w-2xl">
             Our research output in peer-reviewed journals, preprints, and reviews.
           </p>
           <div className="flex gap-4 mt-6">
@@ -97,7 +97,7 @@ export default function PublicationsPage() {
               href="https://pubmed.ncbi.nlm.nih.gov/?term=vachon-presseau"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-white/10 text-white rounded-lg text-sm font-medium hover:bg-white/20 transition-colors border border-white/20"
+              className="inline-flex items-center px-4 py-2 border border-gray-300 text-text-secondary rounded-lg text-sm font-medium hover:border-mcgill-red hover:text-mcgill-red transition-colors"
             >
               PubMed
             </a>
@@ -105,7 +105,7 @@ export default function PublicationsPage() {
               href="https://scholar.google.com/citations?user=hfcMdMEAAAAJ"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-white/10 text-white rounded-lg text-sm font-medium hover:bg-white/20 transition-colors border border-white/20"
+              className="inline-flex items-center px-4 py-2 border border-gray-300 text-text-secondary rounded-lg text-sm font-medium hover:border-mcgill-red hover:text-mcgill-red transition-colors"
             >
               Google Scholar
             </a>

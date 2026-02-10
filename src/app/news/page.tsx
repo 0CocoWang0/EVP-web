@@ -96,10 +96,10 @@ export default function NewsPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-to-br from-primary to-accent py-20">
+      <section className="bg-warm-gray py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">News</h1>
-          <p className="text-xl text-gray-300 max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-4">News</h1>
+          <p className="text-xl text-text-secondary max-w-2xl">
             Latest news, publications, awards, and conference presentations from the EVP Lab.
           </p>
         </div>
