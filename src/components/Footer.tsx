@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
               <div className="w-30 rounded-lg flex items-center justify-center">
                 <img
-                  src="/logos/McGill_University-logo.svg"
+                  src="/logos/McGill_University-Logo.svg"
                   alt="EVP Lab Logo"
                   className="w-full h-full object-contain"
                 />
