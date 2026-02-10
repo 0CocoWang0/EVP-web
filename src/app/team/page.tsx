@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface TeamMember {
   name: string;
   role: string;
@@ -138,7 +136,7 @@ export default function TeamPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-warm-gray py-20">
+      <section className="bg-warm-gray pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-black mb-4">
             Our Research Team
@@ -205,7 +203,7 @@ export default function TeamPage() {
           <h2 className="text-sm font-semibold text-mcgill-red uppercase tracking-wider mb-8">
             Postdoctoral Researchers
           </h2>
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-10 sm:gap-20">
             {postdoctoralResearchers.map((member) => (
               <MemberCard key={member.name} member={member} />
             ))}
@@ -221,7 +219,7 @@ export default function TeamPage() {
               Doctoral Students
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-10 sm:gap-20">
             {currentMembers.map((member) => (
               <MemberCard key={member.name} member={member} />
             ))}
@@ -235,7 +233,7 @@ export default function TeamPage() {
           <h2 className="text-sm font-semibold text-mcgill-red uppercase tracking-wider mb-8">
             Research Assistants
           </h2>
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-10 sm:gap-20">
             {researchAssistants.map((member) => (
               <MemberCard key={member.name} member={member} />
             ))}

@@ -105,12 +105,19 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-150 flex items-center bg-cover bg-center"
+        className="relative min-h-dvh w-full flex justify-start items-center bg-cover bg-center"
         style={{ backgroundImage: "url('/duff-building-bg.jpg')" }}>
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex gap-10 flex-col sm:flex-row w-full justify-start">
+          <div className="flex-1 sm:hidden block">
+            <img
+              src="/logos/evplab-logo.png"
+              alt="EVP Lab Logo"
+              className="w-full h-full object-contain animate-fade-in-up"
+            />
+          </div>
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-8xl font-bold text-white leading-tight mb-6 animate-fade-in-up">
+            <h1 className="text-5xl sm:text-8xl text-white leading-tight mb-6 animate-fade-in-up">
               Welcome to the EVP Lab
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
@@ -141,6 +148,13 @@ export default function Home() {
                 Join the Lab
               </Link>
             </div>
+          </div>
+          <div className="flex-1 sm:block hidden">
+            <img
+              src="/logos/evplab-logo.png"
+              alt="EVP Lab Logo"
+              className="w-full h-full object-contain animate-fade-in-up"
+            />
           </div>
         </div>
       </section>

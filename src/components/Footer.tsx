@@ -127,7 +127,7 @@ export default function Footer() {
               { src: "/logos/part-CIHRIRSC.avif", alt: "CIHR / IRSC" },
               { src: "/logos/part-quebec.avif", alt: "Government of Quebec" },
               {
-                src: "/logos/McGill_University-logo.svg",
+                src: "/logos/McGill_University-Logo.svg",
                 alt: "McGill University",
               },
               { src: "/logos/part-LAEF.avif", alt: "LAEF" },
