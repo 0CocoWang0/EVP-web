@@ -142,11 +142,6 @@ export default function Home() {
                   />
                 </svg>
               </Link>
-              <Link
-                href="/get-involved"
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-colors border border-white/20">
-                Join the Lab
-              </Link>
             </div>
           </div>
           <div className="flex-1 sm:block hidden">
