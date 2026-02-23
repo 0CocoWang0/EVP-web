@@ -147,6 +147,16 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} EVP Lab — McGill University. All
             rights reserved.
           </p>
+          <p className="mt-2">
+            Website developed by{" "}
+            <a
+              href="https://www.linkedin.com/in/wkmxyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-mcgill-red hover:underline">
+              Keming Wang
+            </a>
+          </p>
         </div>
       </div>
     </footer>

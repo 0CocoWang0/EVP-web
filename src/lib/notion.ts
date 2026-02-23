@@ -5,6 +5,7 @@ const notion = new Client({ auth: process.env.NOTION_SECRET });
 const newsDataSourceId = process.env.NOTION_NEWS_DATASOURCE_ID!;
 const mediaDataSourceId = process.env.NOTION_MEDIA_DATASOURCE_ID!;
 const pubsDataSourceId = process.env.NOTION_PUBLICATIONS_DATASOURCE_ID!;
+const teamDataSourceId = process.env.NOTION_TEAM_DATASOURCE_ID!;
 
 export interface NewsItem {
   title: string;
@@ -23,6 +24,19 @@ export interface PublicationItem {
   year: number;
   doi: string;
   images: string[];
+}
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  department: string;
+  bio: string;
+  email: string;
+  photo: string[];
+  status: string;
+  formerRole: string;
+  currentPosition: string;
+  order: number;
 }
 
 export interface MediaItem {
@@ -115,6 +129,31 @@ export async function getPublications(): Promise<PublicationItem[]> {
         year: getNumber(p.Year),
         doi: getUrl(p.DOI),
         images: getFiles(p.Image),
+      };
+    });
+}
+
+export async function getTeamMembers(): Promise<TeamMember[]> {
+  const response = await notion.dataSources.query({
+    data_source_id: teamDataSourceId,
+    sorts: [{ property: "Order", direction: "ascending" }],
+  });
+
+  return response.results
+    .filter((page): page is PageObjectResponse => "properties" in page)
+    .map((page) => {
+      const p = page.properties;
+      return {
+        name: getText(p.Name),
+        role: getText(p.Role),
+        department: getText(p.Department),
+        bio: getText(p.Bio),
+        email: getText(p.Email),
+        photo: getFiles(p.Photo),
+        status: getText(p.Status),
+        formerRole: getText(p["Former Role"]),
+        currentPosition: getText(p["Current Position"]),
+        order: parseInt(getText(p.Order), 10) || 0,
       };
     });
 }
