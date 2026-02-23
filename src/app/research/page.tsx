@@ -115,7 +115,7 @@ export default function ResearchPage() {
                 <div className="w-14 h-14 bg-red-50 rounded-lg flex items-center justify-center text-mcgill-red mb-6">
                   {area.icon}
                 </div>
-                <h3 className="text-xl font-bold text-accent-light mb-3">
+                <h3 className="text-xl font-bold text-secondary mb-3">
                   {area.title}
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed">

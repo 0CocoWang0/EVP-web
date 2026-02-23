@@ -8,14 +8,8 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/team", label: "Team" },
   { href: "/research", label: "Research" },
-  {
-    href: "/publications",
-    label: "Publications",
-    children: [
-      { href: "/publications", label: "Publications" },
-      { href: "/conferences", label: "Conferences" },
-    ],
-  },
+  { href: "/publications", label: "Publications" },
+  { href: "/conferences", label: "Conferences" },
   { href: "/news", label: "News" },
   /*   { href: "/get-involved", label: "Get Involved" },
    */ { href: "/media-and-press", label: "Media & Press" },
@@ -38,7 +32,6 @@ const navLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -58,8 +51,8 @@ export default function Navbar() {
       <nav
         className={`max-w-6xl mx-auto rounded-2xl transition-all duration-300 ${
           scrolled
-            ? "bg-white/80 backdrop-blur-xl shadow-lg"
-            : "bg-white/70 backdrop-blur-md shadow-sm"
+            ? "bg-white/80 backdrop-blur-xl shadow-2xl"
+            : "bg-white/70 backdrop-blur-md shadow-lg"
         }`}>
         <div className="px-4 sm:px-6">
           <div className="flex justify-between items-center h-16">
@@ -87,54 +80,7 @@ export default function Navbar() {
             {/* Desktop Nav */}
             <div className="hidden lg:flex items-center space-x-0.5">
               {navLinks.map((link) =>
-                link.children ? (
-                  <div
-                    key={link.label}
-                    className="relative"
-                    onMouseEnter={() => setOpenDropdown(link.label)}
-                    onMouseLeave={() => setOpenDropdown(null)}>
-                    <Link
-                      href={link.href}
-                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                        isActive(link.href)
-                          ? "bg-mcgill-red/10 text-mcgill-red"
-                          : "text-text-secondary hover:bg-gray-100 hover:text-primary"
-                      }`}>
-                      {link.label}
-                      <svg
-                        className={`inline-block w-3 h-3 ml-0.5 transition-transform duration-200 ${
-                          openDropdown === link.label ? "rotate-180" : ""
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </Link>
-                    <div
-                      className={`absolute top-full left-0 pt-2 transition-all duration-200 origin-top ${
-                        openDropdown === link.label
-                          ? "opacity-100 scale-100"
-                          : "opacity-0 scale-95 pointer-events-none"
-                      }`}>
-                      <div className="bg-white/90 backdrop-blur-xl shadow-lg rounded-xl py-1.5 min-w-45">
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-4 py-2 text-sm text-text-secondary hover:bg-mcgill-red/5 hover:text-mcgill-red transition-colors rounded-lg mx-1.5">
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : link.icon ? (
+                link.icon ? (
                   <a
                     key={link.href}
                     href={link.href}
@@ -222,15 +168,6 @@ export default function Navbar() {
                     {link.label}
                   </Link>
                 )}
-                {link.children?.map((child) => (
-                  <Link
-                    key={child.href}
-                    href={child.href}
-                    className="block pl-8 py-1.5 text-sm text-text-light hover:text-mcgill-red transition-colors"
-                    onClick={() => setMobileOpen(false)}>
-                    {child.label}
-                  </Link>
-                ))}
               </div>
             ))}
           </div>

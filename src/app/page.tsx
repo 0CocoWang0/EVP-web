@@ -104,10 +104,8 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section
-        className="relative min-h-dvh w-full flex justify-start items-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/duff-building-bg.jpg')" }}>
-        <div className="absolute inset-0 bg-black/50" />
+      <section className="relative min-h-dvh w-full flex justify-start items-center bg-cover bg-center">
+        <div className="absolute inset-0 bg-white" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex gap-10 flex-col sm:flex-row w-full justify-start">
           <div className="flex-1 sm:hidden block">
             <img
@@ -117,10 +115,10 @@ export default function Home() {
             />
           </div>
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-8xl text-white leading-tight mb-6 animate-fade-in-up">
+            <h1 className="text-5xl sm:text-8xl text-black leading-tight mb-6 animate-fade-in-up">
               Welcome to the EVP Lab
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-300 leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
+            <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
               Explore the forefront of pain research and innovation in our
               dedicated research lab.
             </p>
@@ -242,7 +240,7 @@ export default function Home() {
                 <div className="w-14 h-14 bg-red-50 rounded-lg flex items-center justify-center text-mcgill-red mb-6">
                   {item.icon}
                 </div>
-                <h4 className="text-xl font-semibold text-accent-light mb-3">
+                <h4 className="text-xl font-semibold text-accent mb-3">
                   {item.title}
                 </h4>
                 <p className="text-text-secondary text-sm leading-relaxed">
