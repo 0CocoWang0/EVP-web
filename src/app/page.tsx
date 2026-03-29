@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "@/components/Button";
 
 const about = [
   {
@@ -104,18 +105,17 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-dvh w-full flex justify-start items-center bg-cover bg-center">
-        <div className="absolute inset-0 bg-white" />
+      <section className="relative min-h-[90vh] w-full flex justify-start items-center bg-cover bg-center">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex gap-10 flex-col sm:flex-row w-full justify-start">
-          <div className="flex-1 sm:hidden block">
+          <div className="sm:hidden block">
             <img
               src="/logos/evplab-logo.png"
               alt="EVP Lab Logo"
-              className="w-full h-full object-contain animate-fade-in-up"
+              className="w-25 object-contain animate-fade-in-up"
             />
           </div>
-          <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-8xl text-black leading-tight mb-6 animate-fade-in-up">
+          <div className="max-w-3xl pt-10">
+            <h1 className="text-5xl sm:text-8xl text-black font-bold leading-tight mb-6 animate-fade-in-up">
               Welcome to the EVP Lab
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
@@ -123,23 +123,7 @@ export default function Home() {
               dedicated research lab.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in-up animation-delay-400">
-              <Link
-                href="/research"
-                className="inline-flex items-center px-6 py-3 bg-mcgill-red text-white rounded-lg font-medium hover:bg-red-700 transition-colors">
-                Our Research
-                <svg
-                  className="w-4 h-4 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
+              <Button href="/research">Discover Our Research</Button>
             </div>
           </div>
           <div className="flex-1 sm:block hidden">
@@ -153,17 +137,17 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-primary-light relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="z-5 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-sm font-semibold text-mcgill-red uppercase tracking-wider mb-3">
+              <h2 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">
                 About Us
               </h2>
-              <h3 className="text-3xl sm:text-4xl font-bold text-black mb-6">
+              <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6">
                 Pioneering Chronic Pain Research
               </h3>
-              <div className="space-y-4 text-text-secondary leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>
                   The EVP Lab started in August 2019 at McGill University in
                   Montreal and is affiliated with the{" "}
@@ -171,7 +155,7 @@ export default function Home() {
                     href="https://www.mcgill.ca/painresearch/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-mcgill-red hover:underline">
+                    className="text-white bg-primary hover:underline">
                     Alan Edwards Centre for Research on Pain
                   </a>
                   .
@@ -185,40 +169,29 @@ export default function Home() {
                   in health across diverse populations.{" "}
                 </p>
               </div>
-              <Link
-                href="/team"
-                className="inline-flex items-center mt-8 text-mcgill-red font-medium hover:underline">
-                Meet our team
-                <svg
-                  className="w-4 h-4 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
+
+              <div className="mt-8">
+                <Button href="/team" variant="link">
+                  Meet our team
+                </Button>
+              </div>
             </div>
 
             <div className="rounded-2xl p-8 lg:p-12">
               <div className="flex w-full justify-between gap-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">2019</div>
+                  <div className="text-6xl font-bold text-white">2019</div>
                   <div className="text-sm text-text-light mt-1">Founded</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">10+</div>
+                  <div className="text-6xl font-bold text-white">10+</div>
                   <div className="text-sm text-text-light mt-1">
                     Lab Members
                   </div>
                 </div>
 
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">CRC</div>
+                  <div className="text-6xl font-bold text-white">CRC</div>
                   <div className="text-sm text-text-light mt-1">
                     Canada Research Chair
                   </div>
@@ -226,6 +199,17 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="w-full items-center pt-8">
+            <div>
+              <img
+                src="/images/team2.png"
+                alt="Research"
+                className="w-full h-[300px] object-cover object-[center_20%]"
+              />
+            </div>
+          </div>
+          {/* Decorative Blurred Circle */}
+          <div className="absolute z-0 bottom-1/2 -right-1/3 w-1/2 h-1/2 bg-accent-light/30 rounded-full blur-3xl pointer-events-none" />
         </div>
       </section>
 
@@ -240,33 +224,14 @@ export default function Home() {
                 <div className="w-14 h-14 bg-red-50 rounded-lg flex items-center justify-center text-mcgill-red mb-6">
                   {item.icon}
                 </div>
-                <h4 className="text-xl font-semibold text-accent mb-3">
+                <h4 className="text-2xl font-bold text-accent mb-3">
                   {item.title}
                 </h4>
-                <p className="text-text-secondary text-sm leading-relaxed">
+                <p className="text-text-secondary leading-relaxed">
                   {item.description}
                 </p>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/research"
-              className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary-light transition-colors">
-              Learn More About Our Research
-              <svg
-                className="w-4 h-4 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
           </div>
         </div>
       </section>

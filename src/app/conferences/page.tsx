@@ -135,12 +135,12 @@ export default function ConferencesPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-warm-gray pt-32 pb-20">
+      <section className="bg-primary-light pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Conferences
           </h1>
-          <p className="text-xl text-text-secondary max-w-2xl">
+          <p className="text-xl text-white/80 max-w-2xl">
             Our lab regularly presents research at national and international
             pain conferences.
           </p>

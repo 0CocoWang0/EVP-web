@@ -1,4 +1,5 @@
 import { getPublications } from "@/lib/notion";
+import Button from "@/components/Button";
 
 export const revalidate = 60;
 
@@ -11,27 +12,25 @@ export default async function PublicationsPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-warm-gray pt-32 pb-20">
+      <section className="bg-primary-light pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Publications
           </h1>
 
           <div className="flex gap-4 mt-6">
-            <a
+            <Button
               href="https://pubmed.ncbi.nlm.nih.gov/?term=vachon-presseau"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 border border-gray-300 text-text-secondary rounded-lg text-sm font-medium hover:border-mcgill-red hover:text-mcgill-red transition-colors">
+              variant="primary"
+              external>
               PubMed
-            </a>
-            <a
+            </Button>
+            <Button
               href="https://scholar.google.com/citations?user=hfcMdMEAAAAJ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 border border-gray-300 text-text-secondary rounded-lg text-sm font-medium hover:border-mcgill-red hover:text-mcgill-red transition-colors">
+              variant="primary"
+              external>
               Google Scholar
-            </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -46,7 +45,7 @@ export default async function PublicationsPage() {
           ) : (
             years.map((year) => (
               <div key={year} className="mb-12">
-                <h2 className="text-2xl font-bold text-secondary mb-6 pb-2 border-b border-gray-200">
+                <h2 className="text-4xl font-bold text-primary mb-6 pb-2 border-b border-gray-200">
                   {year}
                 </h2>
                 <div className="space-y-6">

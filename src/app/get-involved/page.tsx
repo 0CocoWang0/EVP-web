@@ -22,15 +22,12 @@ export default function GetInvolvedPage() {
   return (
     <>
       {/* Header */}
-      <section
-        className="relative pt-32 pb-20 min-h-120 bg-cover bg-top"
-        style={{ backgroundImage: "url('/images/team2.png')" }}>
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative max-w-7xl text-left mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-primary-light pt-40 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Get Involved
           </h1>
-          <p className="text-xl text-white max-w-2xl">
+          <p className="text-xl text-white/80 max-w-2xl">
             The Vachon-Presseau lab welcomes trainees and collaborators from a
             variety of backgrounds, including{" "}
             <span className="text-red-300 font-bold">neuroscience</span>,{" "}

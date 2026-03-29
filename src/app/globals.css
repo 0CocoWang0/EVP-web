@@ -11,12 +11,11 @@
   --color-text-secondary: #4a4a68;
   --color-text-light: #7a7a8e;
 
-  --font-poppins: "Poppins", sans-serif;
   --font-din: "DIN Alternate", "DIN Next W01 Light", sans-serif;
 }
 
 body {
-  font-family: var(--font-poppins);
+  font-family: var(--font-playfair);
   color: var(--color-text-primary);
 }
 
