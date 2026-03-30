@@ -106,16 +106,16 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[70vh] w-full flex justify-start items-center bg-cover bg-center">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex gap-10 flex-col sm:flex-row w-full justify-start">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex sm:gap-10 flex-col sm:flex-row w-full justify-start">
           <div className="sm:hidden block">
             <img
               src="/logos/evplab-logo.png"
               alt="EVP Lab Logo"
-              className="w-25 object-contain animate-fade-in-up"
+              className="w-1/2 object-contain animate-fade-in-up"
             />
           </div>
-          <div className="max-w-3xl pt-10">
-            <h1 className="text-5xl sm:text-8xl text-black font-bold leading-tight mb-6 animate-fade-in-up">
+          <div className="max-w-3xl">
+            <h1 className="text-7xl sm:text-8xl text-black font-bold leading-tight mb-6 animate-fade-in-up">
               Welcome to the EVP Lab
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
@@ -126,11 +126,11 @@ export default function Home() {
               <Button href="/research">Discover Our Research</Button>
             </div>
           </div>
-          <div className="flex-1 sm:block hidden">
+          <div className="hidden sm:block absolute right-8 top-1/2 -translate-y-1/2 w-70">
             <img
               src="/logos/evplab-logo.png"
               alt="EVP Lab Logo"
-              className="w-full h-full object-contain animate-fade-in-up"
+              className="w-full object-contain animate-fade-in-up"
             />
           </div>
         </div>

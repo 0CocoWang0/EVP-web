@@ -8,8 +8,9 @@ export default async function MediaPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-primary-light pt-40 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-primary-light pt-40 pb-20 overflow-hidden">
+        <div className="absolute z-0 bottom-1/2 -right-1/3 w-1/2 h-1/2 bg-accent-light/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Media & Press
           </h1>
