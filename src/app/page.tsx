@@ -105,7 +105,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] w-full flex justify-start items-center bg-cover bg-center">
+      <section className="relative min-h-[70vh] w-full flex justify-start items-center bg-cover bg-center">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex gap-10 flex-col sm:flex-row w-full justify-start">
           <div className="sm:hidden block">
             <img
