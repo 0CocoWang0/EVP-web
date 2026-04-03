@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { getNewsItems } from "@/lib/notion";
+
+export const metadata: Metadata = {
+  title: "News",
+  description:
+    "Latest news, milestones, awards, and achievements from the EVP Lab at McGill University.",
+  alternates: { canonical: "/news" },
+};
 
 const categoryColors: Record<string, string> = {
   Milestone: "bg-purple-50 text-purple-700 ring-purple-200",

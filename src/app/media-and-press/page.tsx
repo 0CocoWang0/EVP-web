@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { getMediaItems } from "@/lib/notion";
+
+export const metadata: Metadata = {
+  title: "Media & Press",
+  description:
+    "Media coverage and press features of the EVP Lab's chronic pain research at McGill University.",
+  alternates: { canonical: "/media-and-press" },
+};
 
 export const revalidate = 60;
 

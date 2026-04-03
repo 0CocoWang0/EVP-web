@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Get Involved — Open Positions",
+  description:
+    "Join the EVP Lab at McGill University — open positions for postdoctoral fellows, graduate students, and undergraduate research assistants in chronic pain research.",
+  alternates: { canonical: "/get-involved" },
+};
 
 const positions = [
   {

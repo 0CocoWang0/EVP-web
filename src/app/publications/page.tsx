@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { getPublications } from "@/lib/notion";
 import Button from "@/components/Button";
+
+export const metadata: Metadata = {
+  title: "Publications",
+  description:
+    "Browse peer-reviewed publications from the Etienne Vachon-Presseau Lab — chronic pain, neuroimaging, machine learning, and population health research.",
+  alternates: { canonical: "/publications" },
+};
 
 export const revalidate = 60;
 

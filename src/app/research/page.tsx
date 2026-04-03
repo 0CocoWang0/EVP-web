@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Research — Neuroimaging, Data Science & Sociocultural Determinants of Pain",
+  description:
+    "Explore the EVP Lab's research areas: neuroimaging and mechanisms of pain, data science and population health, and sociocultural determinants of pain at McGill University.",
+  alternates: { canonical: "/research" },
+};
+
 const researchAreas = [
   {
     id: "neuroimaging",

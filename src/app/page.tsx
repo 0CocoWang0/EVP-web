@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/Button";
+
+export const metadata: Metadata = {
+  title: "EVP Lab — Etienne Vachon-Presseau | Chronic Pain Research, McGill University",
+  description:
+    "The Etienne Vachon-Presseau Lab at McGill University — Pioneering chronic pain research through neuroimaging, machine learning, and population health studies.",
+  alternates: { canonical: "/" },
+};
 
 const about = [
   {
@@ -126,7 +134,7 @@ export default function Home() {
               <Button href="/research">Discover Our Research</Button>
             </div>
           </div>
-          <div className="hidden sm:block absolute right-8 top-1/2 -translate-y-1/2 w-70">
+          <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 w-70">
             <img
               src="/logos/evplab-logo.png"
               alt="EVP Lab Logo"
