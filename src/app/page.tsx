@@ -3,7 +3,6 @@ import Link from "next/link";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "EVP Lab — Etienne Vachon-Presseau | Chronic Pain Research, McGill University",
   description:
     "The Etienne Vachon-Presseau Lab at McGill University — Pioneering chronic pain research through neuroimaging, machine learning, and population health studies.",
   alternates: { canonical: "/" },
