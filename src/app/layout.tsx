@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display, Merriweather } from "next/font/google";
-import "./globals.css";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     "The Etienne Vachon-Presseau Lab at McGill University — Pioneering chronic pain research through neuroimaging, machine learning, and population health studies.",
   keywords: [
     "Etienne Vachon-Presseau",
+    "Etienne Vachon Presseau",
+    "etienne vachon presseau",
+    "etienne vachon-presseau",
     "EVP Lab",
     "chronic pain research",
     "pain neuroscience",
